@@ -6,6 +6,34 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="assets/style.css" />
 		<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				const search = document.querySelector('#searchInput')
+
+				//search.focus();
+
+				document.addEventListener('keydown', function(e) {
+              				//if key pressed is Enter key
+              				if (e.keyCode ===  13) {
+						e.preventDefault();
+
+						if (isValidURL(search.value)) {
+							window.location.assign("https://" + search.value);
+							return;
+						}
+
+						window.location.assign("https://duckduckgo.com/?q=" + search.value);
+					}
+				})
+			});
+
+			function isValidURL(string) {
+				var res = string.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
+
+				return (res !== null);
+			};
+		</script>
 	</head>
 
 	<body>
@@ -14,9 +42,18 @@
 
 		<main>
 			<h1>Jump straight in?</h1>
-			<p>
-				[url/search input box here]
-			</p>
+			
+			<noscript>
+				<style>
+					.search { display: none; }
+				</style>
+			</noscript>
+
+			<div class="search">
+				<form id="searchForm">
+					<input type="search" id="searchInput" name="searchInput" placeholder="Search..." autofocus>
+				</form>
+			</div>
 
 			<div class="bookmarks">
 				<h2>Bookmarks</h2>

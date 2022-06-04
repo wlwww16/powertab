@@ -1,6 +1,7 @@
 :root {
-	--fg: #ebdbb2;
+	--fg: #edf4f5;
 	--bg: #1d2021;
+	--bg2: #434343;
 	--accent: #3c78d8;
 }
 
@@ -8,7 +9,6 @@ body {
 	background-color: var(--bg);
 	color: var(--fg);
 	font-family: "Hack", sans-serif;
-	font-size: 110%;
 }
 
 main {
@@ -34,5 +34,21 @@ h1, h2 {
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
-	width: 30%;
+	width: 24rem;
+}
+
+
+
+#searchInput {
+	all: unset;
+	text-align: left;
+	background: var(--bg2);
+	color: var(--fg);
+	padding: 0.7rem 1rem;
+	border-radius: 5px;
+	width: 24rem;
+}
+
+#searchInput::placeholder {
+	opacity: 0.3;
 }

@@ -8,7 +8,8 @@
 body {
 	background-color: var(--bg);
 	color: var(--fg);
-	font-family: "Hack", sans-serif;
+	font-family: "Hack", Arial, Helvetica, sans-serif;
+	margin: 0;
 }
 
 main {
@@ -25,11 +26,21 @@ h1, h2 {
 	margin-top: 6rem;
 }
 
+.topBar {
+	overflow: hidden;
+	padding: 0.7rem;
+}
+
+.topBar img {
+	float: right;
+	padding: 1rem;
+}
+
 .bookmarks img {
 	width: 6rem;
 }
 
-#title-img {
+#titleImage {
 	margin-top: 15rem;
 	margin-left: auto;
 	margin-right: auto;

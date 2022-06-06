@@ -34,21 +34,25 @@ h1, h2 {
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
-	width: 24rem;
+	width: 32rem;
 }
-
-
 
 #searchInput {
 	all: unset;
 	text-align: left;
 	background: var(--bg2);
 	color: var(--fg);
-	padding: 0.7rem 1rem;
+	padding: 0.7rem;
 	border-radius: 5px;
-	width: 24rem;
+	width: 60%;
 }
 
 #searchInput::placeholder {
-	opacity: 0.3;
+	opacity: 0.5;
+}
+
+@media only screen and (max-width: 700px) {
+	#title-img {
+		width: 70%;
+	}
 }
